@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const user = useSupabaseUser()
+  const user = useSupabaseUser()
 </script>
 
 <template>
@@ -12,14 +12,10 @@ const user = useSupabaseUser()
 
         <div class="flex items-center">
           <Command class="mr-4"></Command>
-          <NuxtLink rel="noopener" :to="`https://keypress.blog/login`" v-if="!user">Login</NuxtLink>
+          <NuxtLink rel="noopener" :to="`https://jetpanodoc.vercel.app/login`" v-if="!user">Login</NuxtLink>
           <div>
-            <NuxtImg
-              v-if="user?.user_metadata?.avatar_url"
-              class="w-10 h-10 rounded-full"
-              :src="user?.user_metadata?.avatar_url"
-              :alt="user?.user_metadata?.full_name"
-            />
+            <NuxtImg v-if="user?.user_metadata?.avatar_url" class="w-10 h-10 rounded-full"
+              :src="user?.user_metadata?.avatar_url" :alt="user?.user_metadata?.full_name" />
           </div>
         </div>
       </nav>

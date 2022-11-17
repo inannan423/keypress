@@ -1,26 +1,30 @@
 <script setup lang="ts">
-import { PropType } from "vue"
+  import {
+    PropType
+  } from "vue"
 
-const props = defineProps({
-  show: Boolean,
-  settings: Object as PropType<{
-    image: string
-    active: boolean
-    tags: string[]
-  }>,
-})
-const emits = defineEmits(["update:show"])
-const { settings } = toRefs(props)
+  const props = defineProps({
+    show: Boolean,
+    settings: Object as PropType < {
+      image: string
+      active: boolean
+      tags: string[]
+    } > ,
+  })
+  const emits = defineEmits(["update:show"])
+  const {
+    settings
+  } = toRefs(props)
 
-watch(
-  () => props.show,
-  () => {
-    if (!props.show) {
-      const editorEl = document.querySelector(".content .ProseMirror") as HTMLDivElement
-      if (editorEl) editorEl.focus()
+  watch(
+    () => props.show,
+    () => {
+      if (!props.show) {
+        const editorEl = document.querySelector(".content .ProseMirror") as HTMLDivElement
+        if (editorEl) editorEl.focus()
+      }
     }
-  }
-)
+  )
 </script>
 
 <template>
@@ -38,7 +42,7 @@ watch(
 
       <div class="mt-8">
         <label for="url">Tags: </label>
-        <TagsInput class="mt-4" v-model="settings.tags"></TagsInput>
+        <!-- <TagsInput class="mt-4" v-model="settings.tags"></TagsInput> -->
       </div>
     </div>
   </Drawer>

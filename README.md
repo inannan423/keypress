@@ -6,12 +6,12 @@
   <br />
 
   <p align="center">
-    A keyboard-first blogging platform. <br> 
+    A keyboard-first blogging platform. <br>
     Finally write your blog post only with keys 🎹
   </p>
 
-  <p align="center"> 
-    <a href="https://keypress.blog/">View Demo</a>
+  <p align="center">
+    <a href="https://jetpanodoc.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/zernonia/keypress/issues">Report Bug</a>
     ·
@@ -62,15 +62,20 @@ Yarn
 ### Development
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/zernonia/keypress.git
    ```
+
 2. Install NPM packages
+
    ```sh
    cd keypress
    yarn install
    ```
+
 3. Run local development instance
+
    ```sh
    yarn dev
    ```
